@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="log_page.css">
+</head>
+
+<body style=" margin-top:100px;">
+    
+    <div style="text-align:center;">
+        <img class="img" src="download1.png" style="width: 350px;">
+        <form class="form" id="login-form" style="padding-top:35px; padding-bottom:35px; width:350px; border: 1px solid rgb(188, 172, 172);">
+            <br />
+            <input class="input" type="text" id="username" placeholder="  Username or Email" required><br/><br/>
+            <input class="input" type="password" id="password" placeholder="  Password" required><br/><br/>
+            <p style="color: rgb(56, 53, 53); font-size:small;">By continuing, you agree to <a href="#" style="text-decoration: underline; color:black;"><b style="color: black;">Totality Corp's</b></a> Conditions of<br /> Use and Privacy Notice.</p>
+            <button class="bt" type="submit">Log in</button>
+        </form>
+        <script>
+            document.getElementById("login-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+
+                // Simulated backend user data (replace with your own backend logic)
+                const users = [
+                    { username: "user", password: "password" },
+                    { username: "aditiarya", password: "aditiarya" }
+                ];
+
+                // Check if the provided username and password match any user
+                const user = users.find(u => u.username === username && u.password === password);
+
+                if (user) {
+                    // Redirect to a dashboard or another page
+                    window.location.href = "index-home.html";
+                } else {
+                    alert("Login failed. Please check your credentials.");
+                }
+            });
+        </script>
+    </div>
+</body>
+
+</html>

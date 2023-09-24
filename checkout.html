@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <nav class="nav">
+        <a href="index.html"><img src="logo-X.png" alt="" class="logo"></a>
+        <div class="links">
+            <div class="div-tap">
+                <img src="Aditi-Image.jpg" style="width:35px; height:35px; border-radius:100%;">&ensp;
+                <a style="color: black; font-weight:500; font-size:large;" href="#">Aditi Arya</a>&emsp;&emsp;&emsp;
+                <img src="secure.png" style="width:95px; height:65px; border-radius:100%; margin-top:-7px;">&ensp;
+            </div>
+        </div>
+    </nav>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+        $(function () {
+            var value = localStorage.getItem('counterValue');
+            var priceCount = 0;
+
+            console.log(value);
+            for(var i=0; i<value; i++){
+                var prod = 'card' + (i + 1);
+                var image = 'image' + (i + 1);
+                console.log(prod);
+                var card = localStorage.getItem(prod);
+                console.log(card);
+
+                //Splitting the card values
+                const wordArray = card.split("\n");
+                const actPrice = wordArray[1];
+                console.log(wordArray);
+
+                //spilitting the price values
+                const priceArray = wordArray[2].split(".");
+                priceCount += Number(priceArray[1]);
+
+                const imageURL = localStorage.getItem(image);
+                console.log(imageURL);
+                $('#parent').append('<div class="first" style="padding:5px; width:440px; height:125px; border: 1px solid lightgray; margin-left:82px; margin-top:15px;"><div><img class="image" id="receivedImage" style="width:98px; height:107px; border:1px solid lightgray;" src="'+imageURL + '"><div/>' + 
+                    '<p class="para" style="margin-left:122px; margin-top:-104px;"><b>' +wordArray[0] + wordArray[1] + ' </b><br/><a>' + wordArray[2] + ' <s style="font-size:14px; color: rgb(242, 56, 56);">' + wordArray[3] + '</s></a></p></div>');
+            
+                
+            } 
+            var sentence = 'Price Details (' + value+ ' items)';
+            var sentenceElement = document.getElementById("textPrice");
+            sentenceElement.textContent = sentence;
+
+            //Total MRP Calculated
+            var sentence2 = 'Rs. ' + priceCount;
+            var sentenceElement2 = document.getElementById("totalPrice");
+            sentenceElement2.textContent = sentence2;
+
+            //TotalPrice Calculated with fee
+            var p = priceCount + 20
+            var sentence3 = 'Rs. ' + p;
+            var sentenceElement3 = document.getElementById("totalP");
+            sentenceElement3.textContent = sentence3;
+        })
+    };
+    </script>
+    
+    <div class="main">
+        <div class="product-details" id="parent"></div>
+        <div class="payment-details">
+            <p><b id="textPrice"></b></p>
+            Total MRP :<p style="margin-top: -24px; color:rgb(0, 118, 51); margin-left:246px;" id="totalPrice"></p>
+            Convenience Fee :<p style=" font-size:11px; color:rgb(169, 2, 2);"><a>Know More</a></p><p style="margin-top: -55px; color:rgb(169, 2, 2); margin-left:259px;" id="totalPrice">Rs. 20</p>
+            <div class="hr-div"></div><br />
+            Total Price :<p style="margin-top: -24px; color:rgb(0, 118, 51); margin-left:246px;" id="totalP"></p>
+            <br/>
+            <button data-toggle="modal" data-target="#staticBackdrop" class="tap">Continue To Add Address</button>
+            <br/><br />
+            <b><u> Delivering to:</u></b>
+            <div id="output">
+                <!-- Saved input values will be displayed here -->
+            </div>
+            <br />
+            <div class="flex-item">
+                <div class="cash"><a href="#"><img class="cash" src="gpay.png"></a></div>
+                <div class="cash"><a href="#"><img class="cash" src="phonepe.png"></a></div>
+                <div class="cash"><a href="#"><img class="cash" src="cash.png"></a></div>
+            </div>
+            <br />
+            <button class="tap">Continue To Checkout</button><br /><br />
+            
+            <br /><br /><br /><br /><br />
+        </div>
+    
+    </div>
+
+    <script src="checkout.js"></script>
+
+    <!--  MODAL ADDRESS  -->
+
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="staticBackdropLabel">Address -</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form style="font-size: small;">
+                        <label for="name">Full Name :&emsp;&emsp;&ensp;&emsp;&emsp;</label>
+                        <input type="text" id="name" name="name" required><br><br>
+                    
+                        <label for="street">Street :&emsp;&ensp;&emsp;&emsp;&ensp;&emsp;&emsp;&ensp;</label>
+                        <input type="text" id="street" name="street" required><br><br>
+                    
+                        <label for="city">City :&emsp;&emsp;&ensp;&emsp;&emsp;&ensp;&emsp;&emsp;&ensp;</label>
+                        <input type="text" id="city" name="city" required><br><br>
+                    
+                        <label for="state">State : &emsp;&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;</label>
+                        <input type="text" id="state" name="state" required><br><br>
+                    
+                        <label for="zip">ZIP Code :&emsp;&emsp;&ensp;&ensp;&emsp;&emsp;</label>
+                        <input type="text" id="zip" name="zip" required><br><br>
+                    
+                        <label for="country">Country :</label>&emsp;&emsp;&ensp;&ensp;&emsp;&emsp;&emsp;
+                        <select id="country" name="country" required>
+                            <option value="">Select Country</option>
+                            <option value="United States">United States</option>
+                            <option value="India">India</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <!-- Add more countries here -->
+                        </select><br>
+                    
+                        <label for="newsletter">Subscribe to newsletter :</label>
+                        <input type="checkbox" id="newsletter" name="newsletter" value="yes"><br><br>
+
+                </div>
+                <div class="modal-footer">
+                    <button style="width: 122px; border-radius:0px;" type="button" class="btn btn-secondary" data-dismiss="modal">Back To Cart</button>
+                    <button id="data-dism" style="width: 162px; border-radius:0px;" type="button" class="btn btn-primary" onclick="saveButton()" data-dismiss="">Continue Payment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  MODAL ADDRESS DONE -->
+    
+
+    <div class="navbar-down" style="height: 10px;">
+        <a href="#home" class="active"><i class="fa fa-copyright" style="font-size:14px;color:rgb(0, 0, 0)"></i>&ensp;2023
+            Totality Corp</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Products</a>
+        <a href="#">Company Details</a>
+        <div class="topnav-right">
+            <a href="#" style="font-weight: 650;"><i class="fas fa-globe link"
+                    style="font-size:16px;color:rgb(0, 0, 0)"></i>&ensp;English (IN)</a>
+            <a href="#" style="font-weight: 650;">Support & resources&ensp;<i class="fas fa-angle-up"
+                    style="font-size:15px;font-weight:700; color:rgb(0, 0, 0)"></i></a>
+        </div>
+    </div>
+    
+    </body>
+    
+    </html>

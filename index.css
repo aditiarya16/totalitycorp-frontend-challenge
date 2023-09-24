@@ -1,0 +1,488 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    font-size: 13px;
+    border-right: 1.5px solid rgb(232, 226, 226);
+}
+
+.sidenav a {
+    padding: 10px 2px 6px 26px;
+    text-decoration: none;
+    
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #000000;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 4px;
+    }
+}
+
+
+.btn {
+    width: 105px;
+    background-color: rgb(16, 15, 15);
+    border-radius: 20px;
+}
+
+.card {
+    width: 260px;
+    height: 290px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 14px;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.div-tap {
+    display: flexbox;
+    justify-content: center;
+    
+}
+
+.feed {
+    margin: 50px auto;
+    width: 500px;
+    border-radius: 14px;
+    padding: 10px;
+    border: 1px solid lightgray;
+}
+
+.feed-img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.user-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.name {
+    margin: 0;
+    font-size: 15px;
+}
+
+.user-name {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-card {
+    width: 270px;
+    transition: 0.3s;
+    background-color: #ffffff;
+}
+
+.food-card-img:hover {
+    width: 265px;
+    height: 265px;
+    border: 1px solid rgb(130, 125, 125);
+    border-radius: 30px;
+    box-shadow: 6px 8px 16px 6px gray;
+}
+
+.men-tshirt {
+    width: 103%;
+        height: 256px;
+        border-radius: 0px;
+}
+
+.men-tshirt:hover {
+    width: 265px;
+        height: 265px;
+        border: 1px solid rgb(130, 125, 125);
+        border-radius: 30px;
+        box-shadow: 6px 8px 16px 6px gray;
+}
+
+.food-card-img {
+    width: 103%;
+    height: 256px;
+    border-radius: 0px;
+}
+
+.container {
+    display: flex;
+    gap: 41px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* width: 90px; */
+    margin: 138px 138px;
+}
+
+.card-header {
+    position: relative;
+    width: 100%;
+}
+
+.heart {
+    position: absolute;
+    padding: 2px 12px;
+    font-size: 13px;
+    border-radius: 50%;
+    opacity: 72%;
+    top: 10px;
+    right: 0;
+    margin: 10px;
+}
+
+.ratings {
+    position: absolute;
+    padding: 2px 12px;
+    font-size: 13px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    bottom: 0;
+    margin: 10px;
+}
+
+.best-seller {
+    position: absolute;
+    padding: 2px 8px;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    align-items: center;
+}
+
+.addCart {
+    position: absolute;
+    padding: 2px 8px;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    bottom: 0;
+    left: 12px;
+    margin: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav {
+    z-index: 1;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1.5px solid rgb(232, 226, 226);
+    opacity: 98%;
+    width: 1265px;
+    height: 85px;
+    margin: 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    align-items: center;
+}
+
+.content {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px;
+    align-items: center;
+    position: sticky;
+    top: 87px;
+    z-index: 1;
+}
+
+.icon-1 {
+    width: 67px;
+}
+
+.icon-2 {
+    width: 67px;
+    margin-left: -15px;
+    background-color: white;
+}
+
+.icon-4 {
+    width: 52px;
+    margin-left: -12px;
+}
+
+.icon-5 {
+    width: 69px;
+    margin-left: -17px;
+}
+
+.icon-6 {
+    margin-left: -7px;
+    width: 68px;
+}
+
+.h3-content {
+    margin-top: 5px;
+    font-size: small;
+    font-weight: 500;
+    color: rgb(91, 84, 84);
+}
+
+h5 {
+    font-size: smaller;
+    margin-right: 32px;
+}
+
+.link-btn-2 {
+    border: 1px solid rgb(190, 183, 183);
+    background-color: white;
+    border-radius: 13px;
+    width: 82px;
+    height: 46px;
+    padding-left: 13px;
+    padding-right: 18px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.logo {
+    height: 53px;
+    width: 60px;
+    margin-left: 91px;
+    margin-top: -2px;
+}
+
+.links {
+    display: flex;
+    gap: 15px;
+    margin-right: 37px;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.link-btn {
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 23px;
+    width: 82px;
+    height: 46px;
+    padding-left: 13px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search {
+    border: 1px solid lightgray;
+    border-radius: 60px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    margin-left: 139px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.input {
+    width: 298px;
+    height: 46px;
+    padding: 16px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-btn {
+    border: red;
+    background-color: rgb(244, 35, 84);
+    border-radius: 50%;
+}
+
+hr {
+    transform: rotate(90deg);
+    width: 23px;
+    position: absolute;
+    left: 198px;
+    bottom: 13px;
+}
+
+.hr-2 {
+    transform: rotate(90deg);
+    width: 23px;
+    position: absolute;
+    left: 98px;
+    bottom: 13px;
+}
+
+.hr-9 {
+    transform: rotate(90deg);
+    width: 27px;
+    position: absolute;
+    left: 156px;
+    bottom: 25px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+.h2-3 {
+    font-size: 15px;
+    color: gray;
+    font-weight: 400;
+}
+
+.navbar-down {
+    overflow: hidden;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid lightgray;
+    align-items: center;
+}
+
+.topnav-right {
+    float: right;
+}
+
+.navbar-down a {
+    float: left;
+    display: block;
+    color: #414040;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar-down a:hover {
+    background: #f1f1f1;
+    color: black;
+}
+
+#snackbar {
+    visibility: hidden;
+    height: 29px;
+    min-width: 180px;
+    margin-left: -75px;
+    background-color: #3e3838;
+    color: #fff;
+    text-align: center;
+    border-radius: 32px;
+    padding: 4px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 50px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 50px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 50px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 50px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"><title>Totality Corp</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <nav class="nav">
+        <a href="index.html"><img src="logo-X.png" alt="" class="logo"></a>
+        <div class="links">
+            <div class="div-tap">
+                <img src="Aditi-Image.jpg" style="width:40px; height:40px; border-radius:100%;">&ensp;
+                <a style="color: black; font-weight:500; font-size:large;" href="#">Aditi Arya</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="#"><i class="fa fa-heart-o" style="font-size:26px;color:rgb(0, 0, 0)"></i></a>&ensp;
+                <a href="checkout.html"><i class="fa fa-shopping-cart" style="font-size:26px;color:rgb(0, 0, 0)"></i></a>
+            </div>
+        </div>
+    </nav>
+    
+<script src="index.js"></script>
+
+    <div class="sidenav" style="margin-top:-52px;">
+        <a href="#about" style="font-size: larger; color:#000000; font-weight:600;">Category</a>
+        <input type="checkbox" id="men-check" onclick="showMenProducts()" style="margin-left:38px;">
+        <label > Men</label><br>
+        <input type="checkbox" id="women-check" onclick="showWomenProducts()" style="margin-left:38px;">
+        <label for="women"> Women</label><br>
+        
+        <a href="#about" style="font-size: larger; color:#000000; font-weight:600;">Brand</a>
+        <input type="checkbox" id="ss" onclick="showErry()" style="margin-left:38px;">
+        <label> Berrylush</label><br>
+        <input type="checkbox" id="lev" onclick="showLevis()" style="margin-left:38px;">
+        <label> Levis</label><br>
+        <input type="checkbox" id="lp" onclick="showLouisPhilippe()" style="margin-left:38px;">
+        <label> Louis Philippe</label><br>
+        <input type="checkbox" id="puma" onclick="showPuma()" style="margin-left:38px;">
+        <label for="men"> PUMA</label><br>
+        <input type="checkbox" id="lush" onclick="showLush()" style="margin-left:38px;">
+        <label for="women"> Street Style</label><br>
+
+        <a href="#about" style="font-size: larger; color:#000000; font-weight:600;">Price Ranges</a>
+        <input type="checkbox" id="price1" onclick="price1()" style="margin-left:38px;">
+        <label for="women"> 1000-2000</label><br>
+        <input type="checkbox" id="price2" onclick="price2()" style="margin-left:38px;">
+        <label for="women"> 2000-4000</label><br>
+
+        <a href="#about" style="font-size: larger; color:#000000; font-weight:600;">Ratings</a>
+        <input type="checkbox" id="three" onclick="threeRat()" style="margin-left:38px;">
+        <label for="women"> 3.5 <i class="fas fa-star" style=" font-size:13px;color:rgb(0, 0, 0)"></i></label><br>
+        <input type="checkbox" id="four" onclick="fourRat()" style="margin-left:38px;">
+        <label for="women"> 4.5 <i class="fas fa-star" style=" font-size:13px;color:rgb(0, 0, 0)"></i></label><br>
+        
+    </div>
+
+    </div>
+    <div id="snackbar">Added To Cart Successfully</div>
+    
+    <div class="container" id="container">
+
+        <div class="food-card" id="men-tshirt">
+            <div id="test1" class="card-header">
+                <img src="men-tshirt.png" class="men-tshirt" alt="">
+                <div class="best-seller"><i class="fas fa-star" style="font-size:10px;color:rgb(0, 0, 0)"></i>&ensp;4.9</div>
+                <div id="test-child1" class="addCart"><i onclick="myFunction()" id="p-1" class="fa fa-cart-arrow-down" style="font-size:17px;color:rgb(0, 0, 0)"></i></div>
+                <div class="heart"><i class="fa-regular fa-heart" style="font-size:28px; color: #000000;"></i></div>
+            </div>
+            <a id="prod1" href="#" class="card-details"
+                style="font-size: 15px; text-decoration:none; color:rgb(15, 15, 15); font-weight:600;">Louis Philippe<br />
+                <p style="color: rgb(80, 94, 94); font-size:small;">Men Printed Polo Collar T-shirt</p>
+                <p style="color: rgb(0, 0, 0); font-size:smaller;">Rs.1299<br/>
+                    <s style="color: rgb(242, 56, 56);">Rs.1989</s></p>
+            </a>
+        </div>
+        <div class="food-card" id="men-shirt">
+            <div id="test2" class="card-header">
+                <img src="men-shirt.png" class="food-card-img" alt="">
+                <div class="best-seller"><i class="fas fa-star" style="font-size:10px;color:rgb(0, 0, 0)"></i>&ensp;3.8
+                </div>
+                <div id="test-child2" class="addCart"><i id="p-2" onclick="myFunction2()" class="fa fa-cart-arrow-down" style="font-size:17px;color:rgb(0, 0, 0)"></i></div>
+                <div class="heart"><i class="fa-regular fa-heart" style="font-size:28px; color: #000000;"></i></div>
+            </div>
+            <a id="prod2" href="#" class="card-details"
+                style="font-size: 15px; text-decoration:none; color:rgb(15, 15, 15); font-weight:600;">Levis<br />
+                <p style="color: rgb(80, 94, 94); font-size:small;">Linen-Cotton Casual Shirt</p>
+                <p style="color: rgb(0, 0, 0); font-size:smaller;">Rs.1099<br />
+                    <s style="color: rgb(242, 56, 56);">Rs.1489</s></p>
+            </a>
+        </div>
+        <div class="food-card" id="men-sweatshirt">
+            <div class="card-header">
+                <img src="men-sweatshirt.png" class="food-card-img" alt="">
+                <div class="best-seller"><i class="fas fa-star" style="font-size:10px;color:rgb(0, 0, 0)"></i>&ensp;3.5
+                </div>
+                <div class="addCart"><i onclick="myFunction3()" id="p-3" class="fa fa-cart-arrow-down"
+                            style="font-size:17px;color:rgb(0, 0, 0)"></i></div>
+                <div class="heart"><i class="fa-regular fa-heart" style="font-size:28px; color: #000000;"></i></div>
+            </div>
+            <a href="#" class="card-details"
+                style="font-size: 15px; text-decoration:none; color:rgb(15, 15, 15); font-weight:600;">PUMA<br />
+                <p style="color: rgb(80, 94, 94); font-size:small;">POWER Colorblock Sweatshirt</p>
+                <p style="color: rgb(0, 0, 0); font-size:smaller;">Rs.2599<br />
+                    <s style="color: rgb(242, 56, 56);">Rs.4989</s></p>
+            </a>
+        </div>
+        <div class="food-card" id="women-tshirt">
+            <div class="card-header">
+                <img src="women-tshirt.png" class="food-card-img" alt="">
+                <div class="best-seller"><i class="fas fa-star" style="font-size:10px;color:rgb(0, 0, 0)"></i>&ensp;3.9
+                </div>
+                <div class="addCart"><i onclick="myFunction4()" id="p-4" class="fa fa-cart-arrow-down"
+                            style="font-size:17px;color:rgb(0, 0, 0)"></i></div>
+                <div class="heart"><i class="fa-regular fa-heart" style="font-size:28px; color: #3d3b3b;"></i></div>
+            </div>
+            <a href="#" class="card-details"
+                style="font-size: 15px; text-decoration:none; color:rgb(15, 15, 15); font-weight:600;">Street Style<br />
+                <p style="color: rgb(80, 94, 94); font-size:small;">Women Printed Polo Collar T-shirt</p>
+                <p style="color: rgb(0, 0, 0); font-size:smaller;">Rs.1299<br />
+                    <s
+                        style="color: rgb(242, 56, 56);">Rs.1989</s></p>
+            </a>
+        </div>
+        <div class="food-card" id="women-sweatshirt">
+            <div class="card-header">
+                <img src="women-sweatshirt.png" class="food-card-img" alt="">
+                <div class="best-seller"><i class="fas fa-star" style="font-size:10px;color:rgb(0, 0, 0)"></i>&ensp;4.2
+                </div>
+                <div class="addCart"><i onclick="myFunction5()" id="p-5" class="fa fa-cart-arrow-down"
+                            style="font-size:17px;color:rgb(0, 0, 0)"></i></div>
+                <div class="heart"><i class="fa-regular fa-heart" style="font-size:28px; color: #000000;"></i></div>
+            </div>
+            <a href="#" class="card-details"
+                style="font-size: 15px; text-decoration:none; color:rgb(15, 15, 15); font-weight:600;">Louis Philippe<br />
+                <p style="color: rgb(80, 94, 94); font-size:small;">Women Cotton Cropped Sweatshirt</p>
+                <p style="color: rgb(0, 0, 0); font-size:smaller;">Rs.1299<br />
+                    <s
+                        style="color: rgb(242, 56, 56);">Rs.1359</s></p>
+            </a>
+        </div>
+        <div class="food-card" id="dress">
+            <div class="card-header">
+                <img src="dress.png" class="food-card-img" alt="">
+                <div class="best-seller"><i class="fas fa-star" style="font-size:10px;color:rgb(0, 0, 0)"></i>&ensp;4.5
+                </div>
+                <div class="addCart"><i onclick="myFunction6()" id="p-6" class="fa fa-cart-arrow-down"
+                            style="font-size:17px;color:rgb(0, 0, 0)"></i></div>
+                <div class="heart"><i class="fa-regular fa-heart" style="font-size:28px; color: #000000;"></i></div>
+            </div>
+            
+            <a href="#" class="card-details"
+                style="font-size: 15px; text-decoration:none; color:rgb(15, 15, 15); font-weight:600;">Berrylush<br />
+                <p style="color: rgb(80, 94, 94); font-size:small;">Floral A-line Midi Dress</p>
+                <p style="color: rgb(0, 0, 0); font-size:smaller;">Rs.2299<br />
+                    <s
+                        style="color: rgb(242, 56, 56);">Rs.2559</s></p>
+            </a>
+        </div>
+
+        <div class="food-card" id="ethnic-wear">
+            <div class="card-header">
+                <img src="ethnic-wear.png" class="food-card-img" alt="">
+                <div class="best-seller"><i class="fas fa-star" style="font-size:10px;color:rgb(0, 0, 0)"></i>&ensp;4.9
+                </div>
+                <div class="addCart"><i onclick="myFunction7()" id="p-7" class="fa fa-cart-arrow-down"
+                            style="font-size:17px;color:rgb(0, 0, 0)"></i></div>
+                <div class="heart"><i class="fa-regular fa-heart" style="font-size:28px; color: #000000;"></i></div>
+            </div>
+            <a href="#" class="card-details"
+                style="font-size: 15px; text-decoration:none; color:rgb(15, 15, 15); font-weight:600;">Libas<br />
+                <p style="color: rgb(80, 94, 94); font-size:small;">Pure Silk Kurta Set</p>
+                <p style="color: rgb(0, 0, 0); font-size:smaller;">Rs.2199<br />
+                    <s
+                        style="color: rgb(242, 56, 56);">Rs.2509</s></p>
+                
+            </a>
+        </div>
+        <div class="food-card" id="polo">
+            <div class="card-header">
+                <img src="polo.png" class="food-card-img" alt="">
+                <div class="best-seller"><i class="fas fa-star" style="font-size:10px;color:rgb(0, 0, 0)"></i>&ensp;3.5
+                </div>
+                <div class="addCart"><i onclick="myFunction8()" id="p-8" class="fa fa-cart-arrow-down"
+                            style="font-size:17px;color:rgb(0, 0, 0)"></i></div>
+                <div class="heart"><i class="fa-regular fa-heart" style="font-size:28px; color: #000000;"></i></div>
+            </div>
+            <a href="#" class="card-details"
+                style="font-size: 15px; text-decoration:none; color:rgb(15, 15, 15); font-weight:600;">Louis Philippe<br />
+                <p style="color: rgb(80, 94, 94); font-size:small;">Men Printed Polo Collar T-shirt</p>
+                <p style="color: rgb(0, 0, 0); font-size:smaller;">Rs.1299<br />
+                    <s style="color: rgb(242, 56, 56);">Rs.1989</s></p>
+            </a>
+        </div>
+        <div class="food-card" id="red-tshirt">
+            <div class="card-header">
+                <img src="printed.png" class="food-card-img" alt="">
+                <div class="best-seller"><i class="fas fa-star" style="font-size:10px;color:rgb(0, 0, 0)"></i>&ensp;4.2
+                </div>
+                <div class="addCart"><i onclick="myFunction9()" id="p-9" class="fa fa-cart-arrow-down"
+                            style="font-size:17px;color:rgb(0, 0, 0)"></i></div>
+                <div class="heart"><i class="fa-regular fa-heart" style="font-size:28px; color: #000000;"></i></div>
+            </div>
+            <a href="#" class="card-details"
+                style="font-size: 15px; text-decoration:none; color:rgb(15, 15, 15); font-weight:600;">Levis<br />
+                <p style="color: rgb(80, 94, 94); font-size:small;">Men Printed T-shirt</p>
+                <p style="color: rgb(0, 0, 0); font-size:smaller;">Rs.1299<br />
+                    <s
+                        style="color: rgb(242, 56, 56);">Rs.2009</s></p>
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar-down">
+        <a href="#home" class="active"><i class="fa fa-copyright"
+                style="font-size:14px;color:rgb(0, 0, 0)"></i>&ensp;2023 Totality Corp</a>
+        <a href="#">Priv</a>
+        <a href="#home" class="active"><i class="fa fa-copyright" style="font-size:14px;color:rgb(0, 0, 0)"></i>&ensp;2023
+            Totality Corp</a>
+        <a href="#">Terms</a>
+        <a href="#">Products</a>
+        <a href="#">Company Details</a>
+        <div class="topnav-right">
+            <a href="#" style="font-weight: 650;"><i class="fas fa-globe link"
+                    style="font-size:16px;color:rgb(0, 0, 0)"></i>&ensp;English (IN)</a>
+            <a href="#" style="font-weight: 650;">Support & resources&ensp;<i class="fas fa-angle-up"
+                    style="font-size:15px;font-weight:700; color:rgb(0, 0, 0)"></i></a>
+        </div>
+    </div>
+
+    </body>
+
+</html>

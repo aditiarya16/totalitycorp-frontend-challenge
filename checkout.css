@@ -1,0 +1,63 @@
+.main {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+
+.product-details {
+    margin-top: 70px;
+    margin-left: 140px;
+    padding-top: 35px;
+    height: 550px;
+    width: 540px;
+}
+
+.payment-details {
+    margin-top: 120px;
+    margin-right: 170px;
+    height: 610px;
+    width: 390px;
+    border-left: 1px solid rgb(194, 183, 183);
+    position: sticky;
+    top:119px;
+    padding-left: 30px;
+}
+.first {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hr-div {
+    width: 305px;
+    border-top: 2px solid rgb(245, 235, 235);
+    margin-top: 29px;
+    
+}
+.tap {
+    width: 300px;
+    height: 44px;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        background-color: rgb(56, 54, 54);
+        border: 1px solid rgb(84, 83, 83);
+        border-radius: 0px;
+}
+.tap:hover {
+    box-shadow: 5px 5px 14px 0px rgba(0, 0, 0, 0.5);
+    background-color: black;
+}
+
+.flex-item {
+    width: auto;
+    height: 58px;
+    
+    display: flex;
+    justify-content: space-around;
+}
+.cash {
+    margin-left: -18px;
+    width: 65px;
+    height: 45px;
+}
